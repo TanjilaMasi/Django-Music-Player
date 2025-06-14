@@ -1,0 +1,28 @@
+<div class="music-player">
+  {% for item in page_obj %}
+  <div class="cover">
+    <img src="{{ item.image.url }}" alt="{{ item.title }} cover">
+  </div>
+
+  <div class="titre">
+    <h3>{{ item.artist }}</h3>
+    <h1>{{ item.title }}</h1>
+  </div>
+
+  <div class="lecteur">
+    <audio class="fc-media" style="width: 100%;" controls>
+      <source src="{{ item.audio_file.url }}" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <div class="controls">
+    {% if page_obj.has_previous %}
+    <a href="?page={{ page_obj.previous_page_number }}">⏮ Prev</a>
+    {% endif %}
+    {% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}">Next ⏭</a>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.music-player {
+  max-width: 400px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  background: linear-gradient(145deg, #111, #1a1a1a);
+  border-radius: 12px;
+  box-shadow: 0 0 20px #222;
+  transition: transform 0.2s ease-in-out;
+}
+
+.music-player:hover {
+  transform: scale(1.02);
+}
+
+.cover img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #000;
+}
+
+.titre h1 {
+  font-size: 26px;
+  margin: 12px 0 6px;
+  text-align: center;
+}
+
+.titre h3 {
+  font-size: 16px;
+  margin: 0 0 12px;
+  color: #aaa;
+  text-align: center;
+  font-weight: normal;
+}
+
+audio {
+  width: 100%;
+  margin-top: 12px;
+  outline: none;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  margin: 12px 0;
+}
+
+.controls a {
+  text-decoration: none;
+  font-size: 28px;
+  color: #5bbb95;
+  transition: color 0.3s ease;
+}
+
+.controls a:hover {
+  color: #88ff00;
+}
+
+.lyrics {
+  margin-top: 20px;
+  font-family: "Sofia", sans-serif;
+  font-size: 1.5em;
+  color: #88ff00;
+  text-align: center;
+  min-height: 2em;
+}
+
+.progress-bar {
+  height: 5px;
+  background: #333;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress {
+  height: 5px;
+  width: 0%;
+  background: #5bbb95;
+  transition: width 0.2s;
+}
+
+@media (max-width: 500px) {
+  .music-player {
+    width: 90%;
+    padding: 15px;
+  }
+  .titre h1 {
+    font-size: 22px;
+  }
+  .lyrics {
+    font-size: 1.2em;
+  }
+}
